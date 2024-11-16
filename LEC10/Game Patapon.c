@@ -1,5 +1,6 @@
     #include<stdio.h>
     #include<string.h>
+    
     int checkSame(char c1[], char c2[])
     {
         if(strlen(c1) != strlen(c2)) return 0;
@@ -97,7 +98,6 @@
                 
                 if(c == '\n')
                 {
-                    +
                     printf("NO %d",blood);
                     return 0;
                 }
