@@ -30,10 +30,10 @@ int main(void) {
     return 0;
 }
 int cmp(const void *a, const void *b) {
-    if(((message_info *)a)->time.hour != ((message_info *)b)->time.hour) {
-        return ((message_info *)a)->time.hour - ((message_info *)b)->time.hour;
+    if(((struct message_info *)a)->time.hour != ((struct message_info *)b)->time.hour) {
+        return ((struct message_info *)a)->time.hour - ((struct message_info *)b)->time.hour;
     } else {
-        return ((message_info *)a)->time.minute - ((message_info *)b)->time.minute;
+        return ((struct message_info *)a)->time.minute - ((struct message_info *)b)->time.minute;
     }
 }
 
