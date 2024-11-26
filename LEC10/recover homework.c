@@ -27,10 +27,10 @@ void recovery(char *homework) {
     {
         ok[i] = 0;
     }
-    for(int i = 0; i<= n-1;i++)
+    for(int i = 0; i<= n - 1;i++)
     {
         char c = *(homework+i);
-        if(c == ' ' || i == n-1)
+        if(c == ' ' || i == n - 1)
         {
             int valid = 1;
             char temp[10000] = "";

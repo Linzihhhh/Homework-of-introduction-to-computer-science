@@ -27,3 +27,5 @@ unsigned long long construct(unsigned char parts[16])
     unsigned long long ans = temp1 ^ temp2;
     return ans;
 }
+
+
