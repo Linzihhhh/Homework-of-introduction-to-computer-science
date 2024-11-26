@@ -50,8 +50,8 @@ void recovering_order(char *order, char **result) {
     const char *delim = ":";
     char *acronym = strtok(order, delim);
     int l = 0;
-    char *trueans = (char *)malloc(500 * sizeof(char));
-
+    //char *trueans = (char *)malloc(500 * sizeof(char));
+    char trueans[500] = "";
     while(acronym != NULL)
     {
         int pos = 0;
@@ -119,7 +119,8 @@ void recovering_order(char *order, char **result) {
         
     }
     trueans[l-1] = '\0';
-    *result = trueans;
+    printf("%s", trueans);
+    exit(0);
     return;
 }
 /*void recovering_order2(char *order, char **result) {
