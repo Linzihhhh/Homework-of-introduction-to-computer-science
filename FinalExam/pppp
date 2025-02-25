@@ -1,0 +1,30 @@
+The solution to the differential equation \( \frac{dy}{dx} = (1 + y^2) \cos(x) \) with the initial condition \( y(0) = 1 \) is:
+
+\[ y(x) = \tan\left(\sin(x) + \frac{\pi}{4}\right) \]
+
+**Derivation:**
+
+1. **Separate Variables:**
+    \[
+    \frac{dy}{1 + y^2} = \cos(x) \, dx
+    \]
+
+2. **Integrate Both Sides:**
+    \[
+    \arctan(y) = \sin(x) + C
+    \]
+
+3. **Solve for \( y \):**
+    \[
+    y = \tan(\sin(x) + C)
+    \]
+
+4. **Apply Initial Condition \( y(0) = 1 \):**
+    \[
+    1 = \tan(\sin(0) + C) \implies 1 = \tan(C) \implies C = \frac{\pi}{4}
+    \]
+
+5. **Final Solution:**
+    \[
+    y(x) = \tan\left(\sin(x) + \frac{\pi}{4}\right)
+    \]

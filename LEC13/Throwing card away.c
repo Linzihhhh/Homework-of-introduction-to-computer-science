@@ -1,21 +1,37 @@
-#include<stdio.h>
-int n,m;
-int main(){
-    scanf("%d%d",&n,&m);
-    int deque[10000] ={};
-    int front = 5000;
-    int rear = 5000;
-    for(int i = 1; i <= n; i++){
-        deque[rear++] = i;
+#include <stdio.h>
+#include <stdlib.h>
+struct Node {
+    int data;
+    struct Node* next;
+};
+int main() {
+    int n, m;
+    scanf("%d %d", &n, &m);
+    struct Node* top = (struct Node*)malloc(sizeof(struct Node));
+    struct Node* pre = top;
+    for(int i = 0; i <= n-1; i++)
+    {
+        struct Node* temp = (struct Node*)malloc(sizeof(struct Node));
+        temp->data = i+1;
+        pre->next = temp;
+        temp->next = NULL;
+        pre = temp;
     }
-    for(int i = 0; i < m; i++){
-        printf("%d ",deque[front]);
-        deque[front] = 0;
-        front ++;
-        deque[rear++] = deque[front];
-        deque[front] = 0;
-        front++;
+    while(m--)
+    {
+        printf("%d ", top->next->data);
+        struct Node* throw = top->next;
+        struct Node* putDown = top->next->next;
+        
+        free(throw);
+        struct Node* go = putDown;
+        if(m!= 0)
+        {
+            while(go->next != NULL) go = go->next;
+            go->next = putDown;
+            top->next = putDown->next;
+            putDown->next = NULL;
+        } 
     }
-
-    return 0;
+    
 }
